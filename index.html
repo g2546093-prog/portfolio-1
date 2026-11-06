@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>宮澤瑛二郎 | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- 背景アニメーション -->
+    <canvas id="background-canvas" aria-hidden="true"></canvas>
+
+    <!-- ヘッダー -->
+    <header>
+        <a href="#top" class="logo">EIJIRO MIYAZAWA</a>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#hobby">Hobby</a>
+            <a href="#works">Works</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- トップ -->
+        <section id="top" class="hero">
+
+            <div class="hero-content">
+
+                <p class="subtitle">MY PORTFOLIO</p>
+
+                <div class="weather-box">
+                    <span id="weather-icon">🌤️</span>
+                    <span id="weather-text">天気を取得中...</span>
+                </div>
+
+                <h1>宮澤 瑛二郎</h1>
+                <h2>Eijiro Miyazawa</h2>
+
+                <p class="hero-text">
+                    映画と筋トレが好きな大学生。<br>
+                    自分の好きなことをまとめてみました。
+                </p>
+
+                <a href="#about" class="hero-button">
+                    MORE ABOUT ME
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- 自己紹介 -->
+        <section id="about" class="content-section">
+
+            <p class="section-number">01 / PROFILE</p>
+            <h2>About Me</h2>
+
+            <div class="about-box">
+
+                <h3>宮澤 瑛二郎</h3>
+
+                <p>
+                    東京都市大学のデザイン・データ科学部です。<br>
+                    休日はジムに行ったり、映画を観たりしています。
+                </p>
+
+                <p>
+                    オーストラリアのパースに留学していました。<br>
+                    海外での生活は、自分にとって良い経験になりました。
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- 趣味 -->
+        <section id="hobby" class="content-section">
+
+            <p class="section-number">02 / MY FAVORITES</p>
+            <h2>My Hobbies</h2>
+
+            <div class="hobby-container">
+
+                <!-- MARVEL -->
+                <div class="hobby-card">
+
+                    <img src="./media/dom.png" alt="Marvel">
+
+                    <div class="card-content">
+
+                        <p class="card-number">01 / MARVEL</p>
+                        <h3>MARVEL</h3>
+
+                        <p>
+                            マーベル映画が好きで、
+                            MCU作品をよく観ています。
+                            作品同士がつながっているところが面白く、
+                            新作も毎回楽しみにしています。
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- BATMAN -->
+                <div class="hobby-card">
+
+                    <img src="./media/bat.png" alt="Batman">
+
+                    <div class="card-content">
+
+                        <p class="card-number">02 / DC COMICS</p>
+                        <h3>BATMAN</h3>
+
+                        <p>
+                            DCではバットマンが一番好きです。
+                            ゴッサムシティの雰囲気や、
+                            特殊能力を持たずに戦うところが
+                            かっこいいと思います。
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- TRAINING -->
+                <div class="hobby-card">
+
+                    <img src="./media/gym.jpg" alt="Training">
+
+                    <div class="card-content">
+
+                        <p class="card-number">03 / TRAINING</p>
+                        <h3>TRAINING</h3>
+
+                        <p>
+                            筋トレは週に6回行っています。
+                            クラシックフィジークという競技に
+                            参加しています。
+                            オリンピアなど海外の大会を見ることが好きで、
+                            自分もオーストラリアの大会に
+                            出場したいと考えています。
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Works -->
+        <section id="works" class="content-section">
+
+            <p class="section-number">03 / EXPERIENCE</p>
+            <h2>Works & Experience</h2>
+
+            <div class="work-card">
+
+                <div class="work-image">
+                    <img src="./media/nojima2.jpg" alt="Nojima">
+                </div>
+
+                <div class="work-content">
+
+                    <p class="card-number">PART-TIME JOB</p>
+                    <h3>Nojima</h3>
+
+                    <p>
+                        家電量販店のノジマでアルバイトをしています。
+                        主にスマートフォンや通信サービスの
+                        接客・販売を担当しています。
+                    </p>
+
+                </div>
+
+            </div>
+
+            <h3 class="works-title">My Works</h3>
+
+            <div class="works-controls">
+
+                <label for="category">Category</label>
+
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="movie">Movie</option>
+                    <option value="training">Training</option>
+                    <option value="work">Work</option>
+                </select>
+
+                <label for="sort">Sort</label>
+
+                <select id="sort">
+                    <option value="new">Newest</option>
+                    <option value="old">Oldest</option>
+                </select>
+
+            </div>
+
+            <div id="works-grid"></div>
+
+        </section>
+
+        <!-- アニメーションの紹介 -->
+        <section id="art" class="content-section art-section">
+
+            <p class="section-number">04 / INTERACTIVE ART</p>
+
+            <h2>Interactive Background</h2>
+
+            <p>
+                JavaScriptで制作した背景アニメーションです。<br>
+                マウスを動かすと、背景の光が反応します。
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>EIJIRO MIYAZAWA</p>
+        <span>© 2026 Eijiro Miyazawa</span>
+    </footer>
+
+</body>
+</html>
